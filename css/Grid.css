@@ -1,6 +1,4 @@
 .grid-container{
-    padding-top: 20px;
-    padding-bottom: 20px;
     width: 100%;
 }
 .row:before,
@@ -69,14 +67,14 @@ header a {
     text-decoration: none;
     color: black;
 }
-ul {
+nav ul {
     float: left;
     list-style-type: none;
 }
-ul li{
+nav ul li{
     float: left;
 }
-ul a{
+nav ul a{
     display: block;
     height: 40px;
     line-height: 40px;
@@ -88,10 +86,10 @@ ul a{
     text-align: center;
     margin-right: -1px;
 }
-ul .active a, ul a:hover{
+nav ul .active a, ul a:hover{
     background: #e7e7e7;
 }
-ul li:last-child a{
+nav ul li:last-child a{
     margin-right: 0;
 }
 .transparent{
@@ -99,5 +97,6 @@ ul li:last-child a{
     filter:Alpha(opacity=20);
 }
 .special{
-    color: lightcoral;
+    color:red;
 }
+.space{text-indent:20px;margin:10px;}
