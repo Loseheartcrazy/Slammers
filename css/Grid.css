@@ -48,15 +48,41 @@
 .col-1 {
     width: 8.33333333%;
 }
-.rounded{
-    border:1px solid;
-    border-radius:25px;
+.push-12 {
+    left: 100%;
 }
-strong {
-    font-weight: bold;
+.push-11 {
+    left: 91.66666667%;
 }
-dfn {
-    font-style: italic;
+.push-10 {
+    left: 83.33333333%;
+}
+.push-9 {
+    left: 75%;
+}
+.push-8 {
+    left: 66.66666667%;
+}
+.push-7 {
+    left: 58.33333333%;
+}
+.push-6 {
+    left: 50%;
+}
+.push-5 {
+    left: 41.66666667%;
+}
+.push-4 {
+    left: 33.33333333%;
+}
+.push-3 {
+    left: 25%;
+}
+.push-2 {
+    left: 16.66666667%;
+}
+.push-1 {
+    left: 8.33333333%;
 }
 body {
     background-image: url(../img/bg.jpg);
@@ -67,11 +93,11 @@ header a {
     text-decoration: none;
     color: black;
 }
-nav ul {
+ul {
     float: left;
     list-style-type: none;
 }
-nav ul li{
+ul li{
     float: left;
 }
 nav ul a{
@@ -82,9 +108,25 @@ nav ul a{
     border-radius: 3px;
     border: 1px solid #e7e7e7;
     padding: 0 15px;
+    width: 150px;
+    text-align: center;
+    margin-right: -1px;
+}
+#sticker ul a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background: #f8f8f8;
+    border-radius: 3px;
+    border: 1px solid #e7e7e7;
     width: 100px;
     text-align: center;
     margin-right: -1px;
+    text-decoration: none;
+    color: black;
+}
+#sticker ul a:hover{
+    background: #e7e7e7;
 }
 nav ul .active a, ul a:hover{
     background: #e7e7e7;
@@ -99,4 +141,10 @@ nav ul li:last-child a{
 .special{
     color:red;
 }
-.space{text-indent:20px;margin:10px;}
+.space{
+    text-indent:20px;margin:10px;
+}
+
+#wrapper {
+    margin:0 auto;
+}

@@ -5,12 +5,15 @@
     <title>Slammers Beach Volleyball</title>
     <link type="text/css" rel="stylesheet" href="css/Grid.css">
     <link rel="stylesheet" type="text/css" href="css/Panel.css">
+    <link rel="stylesheet" href="css/Modal.css">
+    <link rel="stylesheet" href="css/Form.css">
 </head>
 <body>
 <header>
     <div class="grid-container">
         <div class="row">
-            <div class="col-2"></div>
+            <div class="col-2">
+            </div>
             <div class="col-8">
                 <div class="panel panel-default transparent">
                     <div class="panel-body ">
@@ -29,9 +32,8 @@
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="index.html">Ladders </a></li>
-                                    <li><a href="index.html">About Us</a></li>
-                                    <li><a href="#ContactUs">Contact Us</a></li>
-                                    <li><a class="special" href="index.html">Sign up Now!</a></li>
+                                    <li><a href="index.html">About Volleyball</a></li>
+                                    <li><a class="special" onclick="sign()">Sign up Now!</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -41,15 +43,25 @@
         </div>
     </div>
 </header>
-<section>
+<section id="wrapper">
     <div class="grid-container">
         <div class="row">
-            <div class="col-2">
+            <div class="col-1">
+                <div id="sticker">
+                    <nav>
+                        <ul>
+                            <li><a href="#Announcement">Announcement</a></li>
+                            <li><a href="#WhoCanPlay">who can play</a></li>
+                            <li><a href="#ContactUs">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
+            <div class="col-1"></div>
             <div class="col-8">
                 <div class="panel panel-default transparent">
                     <div class="panel-body">
-                        <div class="panel panel-info">
+                        <div id = "Announcement" class="panel panel-info">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Announcement</h3>
                             </div>
@@ -71,7 +83,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-primary">
+                        <div id = "WhoCanPlay" class="panel panel-primary">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Do You Know that?</h3>
                             </div>
@@ -93,6 +105,111 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div id="signModal" class="modal">
+        <div class="modal-content">
+            <form class="bootstrap-form" action="" method="">
+                <h1>
+
+                    Sign Up!
+                    <a onclick="sign()">x</a>
+                    <span>Please complete all field below.</span>
+
+                </h1>
+                <label>
+                    <div class="col-3" align="right">
+                        <span>Name : </span>
+                    </div>
+                    <input id="name" type="text" name="name" placeholder="Your Full Name" required/>
+                </label>
+                <br>
+                <label>
+                    <div class="col-3" align="right">
+                        <span>Email : </span>
+                    </div>
+                    <input id="email" type="text" name="email" placeholder="Valid Email Address" required/>
+                </label>
+                <br>
+                <label>
+                    <div class="col-3" align="right">
+                        <span>Phone:</span>
+                    </div>
+                    <input id="phone" type="text" name="phone" placeholder="Valid phone number" required/>
+                </label>
+                <br>
+                <label>
+                    <div class="col-3" align="right">
+                        <span>Competition Day:</span>
+                    </div>
+                    <select name="selection">
+                        <option value="Mon">Monday</option>
+                        <option value="Tue">Tuesday</option>
+                        <option value="Wed">Wednesday</option>
+                        <option value="Thur">Thursday</option>
+                        <option value="Fri">Friday</option>
+                    </select>
+                </label>
+                <br>
+                <label>
+                    <div class="col-3" align="right">
+                        <span>Competition Time:</span>
+                    </div>
+                    <select name="selection" >
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Evening">Evening</option>
+                    </select>
+                </label>
+                <br>
+                <label>
+                    <div class="col-3" align="right">
+                        <span>Agreement:</span>
+                    </div>
+                    <input id="TermsAgree"type="checkbox" name="TermsAgree" value="Agree" disabled="disabled">
+                    I have read and agree with our <a onclick="term()" class="special">playing guidelines</a>.
+                </label>
+                <br>
+                <label>
+                    <div class="col-3">
+                        <span>Comment:</span>
+                    </div>
+                    <textarea id="comment" name="comment" placeholder="Your Comment to Us"></textarea>
+
+                </label>
+                <br>
+                <label>
+                    <span>&nbsp;</span>
+                    <input type="submit" class="button" value="submit" />
+                </label>
+            </form>
+        </div>
+    </div>
+    <div id="termModal" class="modal">
+        <div class="modal-content">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-2"><h3 class="panel-title">Playing Guidelines</h3></div>
+                        <div class="col-9"></div>
+                        <div class="col-1"><a onclick="term()">x</a></div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p>Playing Guidelines: </p>
+                    <ol>
+                        <li>Participants in Slammers Beach Volleyball play at their own risk.
+                            <br>Anyone playing is responsible for their own safety and should only play if they are capable.
+                            <br>Check with your doctor before you begin.
+                        </li>
+                        <li>Game fees must be paid prior to the start of the game.</li>
+                        <li>Games may be cancelled by players up to 4 hours before hand to get a refund.</li>
+                        <li>Without 4 hours' notice, participants will forfeit the game and be charged 50% of the game fee</li>
+                    </ol>
+                    <button onclick="term()">Close</button>
                 </div>
             </div>
         </div>
@@ -141,5 +258,8 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.sticky.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
