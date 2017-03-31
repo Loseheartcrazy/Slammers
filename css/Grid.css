@@ -148,3 +148,29 @@ nav ul li:last-child a{
 #wrapper {
     margin:0 auto;
 }
+table, td, th {
+    text-align:center;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid black;
+}
+
+th {
+    background-color: #5C9CC0;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #F2FAFF;
+}
+
+tr:hover {
+    background-color: #FFF5FA;
+}
